@@ -61,13 +61,13 @@ console.log(+""); => 0
 
 2. Comparisons
 
-In js ("2" > 1) => return true bcz js convert it 
+ return true bcz js convert it 
 (null > 0) => false  
 (null >=0) => true
 the reason is that an equality check == and comparison >< >=<= work differently 
 Comparison convert null to a number; treating it as 0 
 so, (null >=0) => true
-
+In js ("2" > 1) =>
 (undefined == 0) => false
 
 
@@ -96,4 +96,48 @@ heap (reference) ie non-primitive
 
 let animal = new String("lion");
 Key value pair => animal[3] => n
-console.log(`)
+console.log(`hello ${name}`)
+The substring() method swaps its two arguments if indexStart is greater than indexEnd,
+ meaning that a string is still returned.
+ The slice() method returns an empty string if this is the case.
+
+If either or both of the arguments are negative or NaN, the substring() method treats 
+them as if they were 0.
+
+
+6. Number
+
+no.toString();
+.toPrecision(1); => means to precise  to the extent of digits 
+.toFixed(); => after decimal the value exists
+.LocaleString('en-In)
+
+7 Maths
+
+.abs()
+Math.floor((Math.random()*10)+1) => no between 1 to 10 
+Math.floor (Math.random()*(max-min +1) + min ) => no between min and max 
+
+8 Date
+const dat = new Date();
+dat.
+dat.toString();
+ const time = Date.now();
+
+ 9 Array 
+ mix dataType
+ make shallow copy 
+ to insert data in arr : arr.push( 45) and for come out use arr.pop()
+ arr.unshift(2) and arr.shift() push and pop from the front
+ arr.join () => convert arr into string
+ slice not manipualte original arr
+ splice manipualte original arr
+ arr push another make it an object 
+ arr.concat() => take the individual ele
+ spread operator: => work as concat
+ let ans = [...arr1 , ...arr2]
+ if one array is in another array then make it 
+ onearray.flat(Infinity)
+ Array.isArray("Neha") => check
+ Array.from("Neha") => make an array
+ Array,of(no1,no2,no3)
