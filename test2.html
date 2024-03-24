@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+
+
+
+</head>
+<body>
+     <ul class="language">
+        <li>Javascript</li>
+    </ul>
+    
+     
+</body>
+<script>
+   
+    function addE (li){
+
+    let a = document.createElement('li')
+     a.innerText =`${li}`
+    document.querySelector(".language").appendChild(a)
+    
+     
+    }
+    addE("java")
+
+// optimised approch 
+    function lang (lan){
+        let c = document.createElement('li')
+        c.innerText = `${lan}`;
+        //  c.appendChild(document.createTextNode(lan))
+        document.querySelector(".language").appendChild(c)
+
+    }
+    lang("C++")
+    // replace
+
+    //      let g = document.querySelector("li:nth-child(2)")
+         
+
+    //  let newE = document.createElement('li')
+    //     newE.innerText = "Mojo"
+    //     g.replaceChildren(newE)
+
+     
+
+        // b =g.appendChild(document.createTextNode("Mojo"))
+        //  g.replaceWith(b)
+        //  console.log(g);
+  
+
+        // edit 
+
+        // when you are doing replace then 4 nodes will be created 
+
+        const last = document.querySelector('li:last-child')
+        console.log("last", last);
+        // last.outerHTML = '<li>TypeScript</li>'
+         last.remove()
+
+
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <button> Button CLicked</button>
+</head>
+<body>
+    <script>
+      class React {
+        constructor(){
+            this.libraray = "React"
+            this.server = "https://localhost:300"
+            document.querySelector("button").addEventListener("click" ,this.handleclick.
+            bind(this))
+        }
+
+        handleclick (){
+            console.log("This is clicked");
+            console.log(this);
+            console.log(this.server);
+        }
+      }
+      // as here we get the reference of this but not the this.server:
+      // for this we have to bind it 
+
+
+      // object create
+
+      const app = new React();
+
+
+
+        </script>
+</body>
+</html>

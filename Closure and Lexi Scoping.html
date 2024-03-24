@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Closure and Scoping</title>
+</head>
+<body>
+ <button id="orange">orange</button>
+ <button id="green">green</button>
+
+
+
+    <script>
+//    function outer (){
+//      const name = "neha"
+
+//     function inner (){
+//         const naam = "Wadhwa"
+//        console.log(name , "inner name")
+//     }
+//     inner()
+//     function innerTwo (){
+//         console.log(name , "inner name ");
+//         console.log(naam, "outer");
+//     }
+//     innerTwo()
+//    }
+//    outer();
+//    console.log(name, "outer");
+    </script>
+
+    <script>
+    // document.querySelector("#orange").addEventListener("click" , ()=>{
+    //     document.body.style.backgroundColor = `orange`
+    // })
+    // document.querySelector("#green").addEventListener("click" , ()=>{
+    //     document.body.style.backgroundColor = `green`
+    // })
+
+
+    // for making code DRY : we make it  as function:
+
+    // function clickHandler (color){
+    //     document.body.style.backgroundColor = `${color}`
+    // }
+    // document.querySelector("#orange").onClick = clickHandler("orange")
+    // document.querySelector("#green").onClick = clickHandler("green")
+
+//    👆 this will not work the reason behind is the handler function is just
+//  calling we can define it anywhere
+
+
+
+
+ function clickHandler (color){
+console.log("athis is running ");
+   return  function (){
+
+        document.body.style.backgroundColor = `${color}`
+    }
+    }
+    document.getElementById("orange").onclick = clickHandler("orange")
+    document.querySelector("#green").onclick = clickHandler("green")
+
+
+
+    </script>
+</body>
+</html>

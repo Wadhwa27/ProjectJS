@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+
+</head>
+<body>
+    <h1> Neha is doing Javascript</h1>
+    <button id ="Stop" > Stop</button>
+    <button id ="Start" >Start</button>
+</body>
+<script>
+ 
+const date =  new Date().toLocaleTimeString();
+console.log(date)
+
+setInterval( function(){
+    console.log("THis is my new date", date)
+}, 2000)
+ 
+</script>
+</html>

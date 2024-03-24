@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>THis is done</h1>
+    <button id = "Start">Start</button>
+    <button id = "Stop">Stop</button>
+</head>
+<body>
+    <script>
+    //   setTimeout(function(){
+    //     console.log("THis is running");
+    //   } , 2000)
+
+//     const hello = function(){
+//         console.log("Hii this is")
+//     }
+  
+  
+//     const change = function(){
+//         document.querySelector("h1").innerHTML = "Neha is done this " 
+//     };
+  
+//     const changeMe = setTimeout(change, 2000)
+
+   
+//    document.querySelector("#Stop").addEventListener("click" , 
+//    function(){
+
+//     clearTimeout(changeMe)
+//     console.log("STOPPED")
+   
+//    })
+//    setInterval()
+
+
+const sayDate = function(str){
+    console.log(str, Date.now())
+
+}
+//    const st = setInterval(sayDate , 1000 , "Hello ")
+
+let  start;
+ document.querySelector("#Start").addEventListener("click", function(){
+   start =  setInterval(sayDate , 1000 , "Hello ")
+
+})
+ document.querySelector("#Stop").addEventListener("click", function(){
+    clearInterval(start)
+})
+// const clear = setInterval(sayDate , 1000 , "Hello ")
+//     clearInterval(clear)
+    </script>
+</body>
+</html>

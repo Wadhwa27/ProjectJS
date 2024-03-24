@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responses</title>
+</head>
+<body>
+    <script>
+        const reqUrl = "https://api.github.com/users/hiteshchoudhary"
+        const xhr = new XMLHttpRequest()
+        xhr.open("GET" , reqUrl)
+        // console.log(xhr.readyState);
+        // we not continuous track this 
+        // for  continuous tracking we have to write the onreadystatechange
+        // open has not been called 
+        xhr.onreadystatechange  = function (){
+            console.log(xhr.readyState);
+            if (xhr.readyState === 4){
+                // convert string into JSON
+                const data = JSON.parse(this.responseText);
+                console.log(data.followers)
+                console.log(this.responseText);
+            }
+        }
+        // console.log("Here is the thing")
+        xhr.send()
+       
+    </script>
+    
+</body>
+</html>
